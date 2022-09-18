@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/carere/auth0-solidjs/compare/v1.0.2...v1.0.3) (2022-09-18)
+
+
+### Bug Fixes
+
+* properly renaming a tag ([cca9e88](https://github.com/carere/auth0-solidjs/commit/cca9e889ed971043faa31714e510d00cfcafa442))
+
 ## [1.0.2](https://github.com/carere/auth0-solidjs/compare/v1.0.1...v1.0.2) (2022-09-18)
 
 
