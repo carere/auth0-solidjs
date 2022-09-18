@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "Auth0 integration for SolidJs",
   "keywords": [
-    "SolidJs",
+    "solidjs",
     "auth0"
   ],
   "bugs": "https://github.com/carere/auth0-solidjs/issues",
