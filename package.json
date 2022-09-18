@@ -20,9 +20,10 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
+    "format": "prettier --write {*,.vscode/*,src/*}.{ts,tsx,json}",
     "lint": "eslint --cache --fix",
     "prepare": "husky install",
-    "release:dry": "dotenv semantic-release --dry-run"
+    "release:dry": "node-env-run --exec 'semantic-release --dry-run'"
   },
   "config": {
     "commitizen": {
@@ -32,6 +33,36 @@
   "release": {
     "branches": [
       "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      "@semantic-release/npm",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            "src/index.tsx",
+            "CHANGELOG.md",
+            "package.json"
+          ]
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json"
+          ]
+        }
+      ]
     ]
   },
   "dependencies": {
@@ -39,19 +70,20 @@
     "solid-js": "1.*"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "6.*",
+    "@semantic-release/git": "10.*",
     "@types/node": "18.*",
     "@typescript-eslint/eslint-plugin": "5.*",
     "@typescript-eslint/parser": "5.*",
     "c8": "7.*",
     "commitizen": "4.*",
     "cz-conventional-changelog": "3.*",
-    "dotenv": "16.*",
-    "dotenv-cli": "6.*",
     "esbuild-plugin-solid": "0.*",
     "eslint": "8.*",
     "eslint-config-prettier": "8.*",
     "husky": "8.*",
     "lint-staged": "13.*",
+    "node-env-run": "4.*",
     "prettier": "2.*",
     "semantic-release": "19.*",
     "sort-package-json": "1.*",
