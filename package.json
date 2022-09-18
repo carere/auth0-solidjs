@@ -20,6 +20,10 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "format": "prettier --write {*,.vscode/*,src/*}.{ts,tsx,json}",

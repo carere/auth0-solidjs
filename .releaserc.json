@@ -10,17 +10,7 @@
       }
     ],
     "@semantic-release/npm",
-    [
-      "@semantic-release/github",
-      {
-        "assets": ["src/index.tsx", "CHANGELOG.md", "package.json"]
-      }
-    ],
-    [
-      "@semantic-release/git",
-      {
-        "assets": ["CHANGELOG.md", "package.json"]
-      }
-    ]
+    "@semantic-release/github",
+    "@semantic-release/git"
   ]
 }
