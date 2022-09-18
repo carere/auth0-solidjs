@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/carere/auth0-solidjs/compare/v1.0.1...v1.0.2) (2022-09-18)
+
+
+### Bug Fixes
+
+* fixing the dist folder not shipped with the package ([b9a72a7](https://github.com/carere/auth0-solidjs/commit/b9a72a7665c83090c06d7b798fc07458369eeb56))
+
 ## [1.0.1](https://github.com/carere/auth0-solidjs/compare/v1.0.0...v1.0.1) (2022-09-18)
 
 
