@@ -6,8 +6,10 @@
     "SolidJs",
     "auth0"
   ],
+  "bugs": "https://github.com/carere/auth0-solidjs/issues",
+  "repository": "github:carere/auth0-solidjs",
   "license": "MIT",
-  "author": "Kevin Abatan <abatan.k@gmail.com>",
+  "author": "Kevin Abatan <abatan.k@gmail.com> (https://github.com/carere)",
   "exports": {
     ".": {
       "require": "./dist/index.js",
@@ -22,48 +24,7 @@
     "build": "tsup",
     "format": "prettier --write {*,.vscode/*,src/*}.{ts,tsx,json}",
     "lint": "eslint --cache --fix",
-    "prepare": "husky install",
-    "release:dry": "node-env-run --exec 'semantic-release --dry-run'"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
-  "release": {
-    "branches": [
-      "main"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/changelog",
-        {
-          "changelogFile": "CHANGELOG.md"
-        }
-      ],
-      "@semantic-release/npm",
-      [
-        "@semantic-release/github",
-        {
-          "assets": [
-            "src/index.tsx",
-            "CHANGELOG.md",
-            "package.json"
-          ]
-        }
-      ],
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "CHANGELOG.md",
-            "package.json"
-          ]
-        }
-      ]
-    ]
+    "prepare": "husky install"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "1.*",
@@ -83,7 +44,6 @@
     "eslint-config-prettier": "8.*",
     "husky": "8.*",
     "lint-staged": "13.*",
-    "node-env-run": "4.*",
     "prettier": "2.*",
     "semantic-release": "19.*",
     "sort-package-json": "1.*",
