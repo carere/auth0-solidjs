@@ -4,6 +4,9 @@ on:
   push:
     branches:
 
+env:
+  HUSKY: 0
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -17,7 +20,7 @@ jobs:
           node-version: 18
           cache: pnpm
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
       - name: Release new package version
         run: pnpm semantic-release
         env:
