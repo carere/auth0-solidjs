@@ -1,5 +1,5 @@
 {
-  "name": "auth0-solidjs",
+  "name": "@carere/auth0-solidjs",
   "version": "1.0.1",
   "description": "Auth0 integration for SolidJs",
   "keywords": [
@@ -27,7 +27,7 @@
   "scripts": {
     "build": "tsup",
     "format": "prettier --write {*,.vscode/*,src/*}.{ts,tsx,json}",
-    "lint": "eslint --cache --fix",
+    "lint": "eslint --cache --fix .",
     "prepare": "husky install"
   },
   "dependencies": {
