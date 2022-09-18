@@ -27,3 +27,6 @@ dist
 
 # Vercel
 .vercel
+
+# Eslint
+.eslintcache
