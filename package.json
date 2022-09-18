@@ -1,0 +1,64 @@
+{
+  "name": "auth0-solidjs",
+  "version": "0.0.0",
+  "description": "Auth0 integration for SolidJs",
+  "keywords": [
+    "SolidJs",
+    "auth0"
+  ],
+  "license": "MIT",
+  "author": "Kevin Abatan <abatan.k@gmail.com>",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint --cache --fix",
+    "prepare": "husky install",
+    "release:dry": "dotenv semantic-release --dry-run"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "dependencies": {
+    "@auth0/auth0-spa-js": "1.*",
+    "solid-js": "1.*"
+  },
+  "devDependencies": {
+    "@types/node": "18.*",
+    "@typescript-eslint/eslint-plugin": "5.*",
+    "@typescript-eslint/parser": "5.*",
+    "c8": "7.*",
+    "commitizen": "4.*",
+    "cz-conventional-changelog": "3.*",
+    "dotenv": "16.*",
+    "dotenv-cli": "6.*",
+    "esbuild-plugin-solid": "0.*",
+    "eslint": "8.*",
+    "eslint-config-prettier": "8.*",
+    "husky": "8.*",
+    "lint-staged": "13.*",
+    "prettier": "2.*",
+    "semantic-release": "19.*",
+    "sort-package-json": "1.*",
+    "tsup": "6.*",
+    "typescript": "4.*"
+  },
+  "volta": {
+    "node": "18.9.0"
+  }
+}
